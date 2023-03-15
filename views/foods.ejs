@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Menu</title>
+
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/mainbody.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/foods.js"></script>
+</head>
+
+<body style=" background-color: #c9bc97;
+  background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')">
+  <h1>Menu</h1>
+  <button id="fetch-foods">Fetch Your Favorite Foods</button>
+  <ul id="foods"></ul>
+  <section id="container">
+
+  </section>
+  <div class="popuptext">
+    <p>Added to order!</p>
+  </div>
+<body>
+  <div class="image">
+    <div class="header">
+      <p>Light Eats</p>
+      <p>Count</p>
+    </div>
+    <main>
+    <section class="menu">
+      <div class="menu-items">
+      <div class="menu-item">
+        <div class="description">
+          <p>hello</p>
+          Butter Naan
+          Leavened white flour bread topped with butter
+        </div>
+        <div class="food-pic">
+          <img src="https://img.cdn4dd.com/p/fit=cover,width=300,height=300,format=auto,quality=50/media/photosV2/18de3163-d481-4c10-a30d-09f61091cb1b-retina-large.PNG">
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="description">
+          Butter Chicken
+          Boneless chicken pieces marinated and cooked in a butter and cream sauce.
+        </div>
+        <div class="food-pic">
+          <img src="https://img.cdn4dd.com/p/fit=cover,width=300,height=300,format=auto,quality=50/media/photosV2/18de3163-d481-4c10-a30d-09f61091cb1b-retina-large.PNG">
+        </div>
+      </div>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item">
+        <div class="description">
+          Butter Naan
+          Leavened white flour bread topped with butter
+        </div>
+        <div class="food-pic" >
+          <img src="https://img.cdn4dd.com/p/fit=cover,width=300,height=300,format=auto,quality=50/media/photosV2/18de3163-d481-4c10-a30d-09f61091cb1b-retina-large.PNG">
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="description">
+          Butter Chicken
+          Boneless chicken pieces marinated and cooked in a butter and cream sauce.
+        </div>
+        <div class="food-pic">
+          <img src="https://img.cdn4dd.com/p/fit=cover,width=300,height=300,format=auto,quality=50/media/photosV2/18de3163-d481-4c10-a30d-09f61091cb1b-retina-large.PNG">
+        </div>
+      </div>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item">
+        <div class="description">
+          Butter Naan
+          Leavened white flour bread topped with butter
+        </div>
+        <div class="food-pic" >
+          <img src="https://img.cdn4dd.com/p/fit=cover,width=300,height=300,format=auto,quality=50/media/photosV2/18de3163-d481-4c10-a30d-09f61091cb1b-retina-large.PNG">
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="description">
+          Butter Chicken
+          Boneless chicken pieces marinated and cooked in a butter and cream sauce.
+        </div>
+        <div class="food-pic">
+          <img src="https://img.cdn4dd.com/p/fit=cover,width=300,height=300,format=auto,quality=50/media/photosV2/18de3163-d481-4c10-a30d-09f61091cb1b-retina-large.PNG">
+        </div>
+      </div>
+    </div>
+    </section>
+    <aside class="checkout">
+      <h1>Checkout </h1>
+    </aside>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+
+</html>

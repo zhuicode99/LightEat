@@ -1,5 +1,5 @@
 // Client facing scripts here
-$(() => {
+/* $(() => {
   $('#fetch-users').on('click', () => {
     $.ajax({
       method: 'GET',
@@ -15,3 +15,15 @@ $(() => {
     });
   });
 });
+ *///original code
+ $(() => {
+  $.ajax({
+    method: "GET",
+    url: "/api/users"
+  }).done((response) => {
+    for(user of response) {
+      $("<div>").text(user.name).appendTo($("body"));
+    }
+  });;
+});
+//new code

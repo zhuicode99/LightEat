@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/header') %>
+<body>
+  <%- include('partials/container-header') %>
+
+    <h2>Hungry? You are in the right place!</h2>
+  <main>
+    <section class="menu">
+      <div class="menu-items">
+      <%for(const item of foodArray){%>
+      <div class="menu-item">
+        <div class="description">
+         <span class="food-name"><%=item.name%></span>
+         <span class="food-description"><%=item.description%></span>
+         <span class="food-price-menu">CA$<%=item.price%></span>
+         <form class="add-food">
+          <input type="hidden" name ="id" id="food-id" value="<%=item.id%>">
+          <input type="hidden" name ="name" id="food-name" value="<%=item.name%>">
+          <input type="hidden" name ="price" id="food-price" value="<%=item.price%>">
+          <input type="hidden" name ="url" id="food-url" value="<%=item.food_url%>">
+          <button type="submit" id="btn"><i class="fa-solid fa-plus"></i></button>
+        </form>
+        </div>
+        <div class="food-pic">
+          <img src="<%=item.food_url%>">
+        </div>
+      </div>
+      <%}%>
+    </div>
+    </section>
+    <aside class="checkout">
+      <header>
+        <form action="/payments">
+        <button class="order-summary">
+       <span>Checkout</span>
+       <output name="order-amount" class="order-amount" for="tweet-text"></output>
+      </button>
+    </form>
+      </header>
+      <footer id="main-order-container">
+
+    </footer>
+    </aside>
+      <!-- <div id="main-order-container">
+      </div>
+    </aside> -->
+
+  </main> <!--moved this from under </header> had some effect-->
+  <%- include('partials/footer') %>
+</body>
+
+</html>

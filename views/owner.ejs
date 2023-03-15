@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Light Eats</title>
+
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/mainbody.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+  <script defer src="/scripts/timer.js"></script>
+  <script defer src="/scripts/click.js"></script>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+    <main class="container" >
+      <div>
+        <h1 style="font-size: larger; color: black">We got great people on both side of the server!</h1>
+        <br>
+
+      <h3>Enter estimated wait time for customer:</h3>
+
+
+
+        </div>
+
+      </main>
+      <form action="/owner" method="post">
+        <input type="number" name="order_time" id="order-time">
+        <button id="owner_input" type="submit">Send Estimate Wait Time To Customer VIA SMS</button>
+      </form>
+
+      <div>
+        <!-- <button> <a href="/order_status">check incoming orders</a></button> -->
+        <button onclick="myFunction()">check order status</button>
+        <div style="display:none" id="myDIV">Estimate Completion Time is: <span id="timer"></span></div>
+      </div>
+      <br>
+      <br>
+      <br>
+  <%- include('partials/footer') %>
+  <!-- <a href ="/foods"><button>Menu</button></a> -->
+</body>
+
+</html>

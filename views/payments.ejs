@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header') %>
+
+<body>
+  <%- include('partials/container-header') %>
+<main class="payment-page">
+  <section class="payment-details">
+    <div class="method">
+      <div>Method</div>
+      <div class="pick-up">
+        <div><span>Pick Up Location</span></div>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="413" height="145" id="gmap_canvas" src="https://maps.google.com/maps?q=%20%20Powered%20by%20Google%20Store%20Address:%20422%20Preston%20St,%20Ottawa,%20ON%20K1S%204N2,%20Canada&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org"></a><br><style>.mapouter{position:relative;text-align:right;height:145px;width:413px;}</style><a href="https://www.embedgooglemap.net">embedding google maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:145px;width:413px;}</style></div></div>
+        <span class="address">Store Address:</span>
+        <span>422 Preston St, Ottawa, ON K1S 4N2, Canada</span>
+      </div>
+    </div>
+    <div class="payment-contact">
+      <div>Payment</div>
+      <div class="visa">
+        <form>
+          <div class="card-CVV">
+            <div class="c-num">
+              <label for="card-number">Card Number</label>
+              <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000">
+
+            </div>
+            <div class="cvv">
+              <label for="CVV">CVV</label>
+              <input type="text" id="CVV" name="CVV">
+            </div>
+          </div>
+          <div class="exp-zip">
+            <div class="card">
+              <label for="card-number">Expiration</label>
+              <input type="text" id="expiration" name="expiration" placeholder="MM / YY">
+            </div>
+            <div class="zip">
+              <label for="CVV">Zip Code</label>
+              <input type="text" id="zipcode" name="zipcode" placeholder="9210" >
+            </div>
+          </div>
+          <!-- <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+        </form>
+        <form action="/payments" method="post">
+          <button style="background-color: green; color:white " id="ownerSMS" type="submit">Confirm Order</button> -->
+        </form>
+      </div>
+      <div class="paypal">
+    </div>
+  </div>
+  <div class="back-to-menu">
+    <a href="/foods"><i class="fa-solid fa-backward"> </i><span>Back to Menu</span></a>
+  </div>
+  </section>
+  <section class="tax-and-total">
+    <div class="pick-up-place-order">
+      <form id="submit-order">
+
+        <button type="submit" class="btn_order">Place Pickup Order</button>
+
+        <button type="submit" class="btn_order-disable" disabled>Place Pickup Order</button>
+
+      </form>
+    </div>
+    <div class="tax-subtotal">
+      <div class="subtotal-div">
+        <span>Subtotal</span>
+        <span>CA$<output name="subtotal" class="subtotal"></output></span>
+      </div>
+      <div class="tax-div">
+        <span>Estimated Tax</span>
+        <span>CA$<output name="estimated-tax" class="estimated-tax"></output></span>
+      </div>
+    </div>
+    <div class="total">
+      <span> Total</span>
+      <span>CA$<output name="calculated-total" class="calculated-total"></output></span>
+    </div>
+    <div class="tandc">
+      <span>By clicking Place Order, you agree to our Terms and Conditions and Privacy statement</span>
+    </div>
+
+  </section>
+</main>
+<footer>
+  <%- include('partials/footer') %>
+</footer>
+</body>

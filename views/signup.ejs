@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/signup.js"></script>
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+  </head>
+
+  <body>
+  <%- include('partials/header') %>
+      <main style="display:flex" >
+        <div>
+          <h3>Account Sign Up</h3>
+          <h4>Enter your contact information and we'll send a 6-digit code to verify your account.</h4>
+          <div>
+            <form method="POST" action="/signup">
+              <input class="form-control" id ="name" type="text" name="name" placeholder="Enter Name" style="width: 300px; margin: 0.5em">
+              <br>
+              <input class="form-control" id ="email" type="email" name="email" placeholder="Email" style="width: 300px; margin: 0.5em">
+              <br>
+              <input class="form-control" id ="phone" type="text" name="phone" style="width: 300px; margin: 0.5em" placeholder="Phone (xxx)-xxx-xxxx">
+              <br>
+              <div>
+                <button id="signup" type="submit" class="btn btn-dark">Submit</button>
+              </div>
+              <div>
+                <h4>Already a member?
+                  <a href="/signin">Sign in here!</a>
+                </h4>
+              </div>
+            </form>
+          </div>
+        <a href ="/">Back to Home Page</a>
+
+        </div>
+      </main>
+      <%- include('partials/footer') %>
+    </body>
+</html>

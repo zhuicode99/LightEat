@@ -10,32 +10,29 @@
 
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
   <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/header.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/mainbody.css" />
   <link rel="stylesheet" href="/styles/footer.css" />
 
-
-
-
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
+  <script defer src="/scripts/timer.js"></script>
+  <script defer src="/scripts/click.js"></script>
 </head>
 
-<body style=" background-color: whitesmoke;
-  background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')">
-  <div class="image">
-    <div class="header">
-    <p>Light Eats</p>
-    </div>
+<body>
+    <%- include('partials/header') %>
+    <h1 style="font-size: larger; color: black">We Are Preparing Your Order!</h1>
+
+    <br>
+  <div>
+    <button onclick="myFunction()">check order status</button>
   </div>
-
-   <div class="sidebar">
-  </div>
-
-
-  <!-- <a href ="/foods"><button>Menu</button></a> -->
+      <br>
+  <main class="container">
+    <div style="display:none" id="myDIV">Estimate Wait Time is: <span id="timer"></span></div>
+  </main>
   <%- include('partials/footer') %>
 </body>
 
