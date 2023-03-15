@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS ordered_foods CASCADE;
+
+CREATE TABLE ordered_foods (
+  id SERIAL PRIMARY KEY NOT NULL,
+  customer_email VARCHAR(255) NOT NULL,
+  food_id INTEGER REFERENCES foods(id) ON DELETE CASCADE,
+  food_count INTEGER NOT NULL,
+  orderId VARCHAR(255) NOT NULL
+);
