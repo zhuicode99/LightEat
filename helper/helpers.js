@@ -1,6 +1,5 @@
-const { LocalStorage } = require("node-localstorage");
-const localStorage = new LocalStorage("./scratch");
-const { getfoods, getfood } = require("../db/queries/foods");
+
+
 
 const generateString = function () {
   let result = " ";
@@ -14,23 +13,7 @@ const generateString = function () {
   return result;
 };
 
-const convertObj = function (objsArray) {
-
-  const obj = {};
-
-  for (const item of objsArray) {
-    const food_count = `${item.name}  Qty. ${item.food_count}`;
-    if (obj[item.orderid]) {
-      obj[item.orderid].food.push(food_count)
-    } else {
-      obj[item.orderid] = {
-        food: [food_count],
-      };
-    }
-  }
-  return obj;
-};
 
 module.exports = {
-  generateString,convertObj
+  generateString
 };

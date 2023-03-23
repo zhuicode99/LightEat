@@ -1,47 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <%- include('partials/header') %>
+  <head>
+    <title>Checkout Page</title>
+  </head>
+  <body>
 
-<head>
-  <title>Light Eats</title>
+    <h2>Checkout</h2>
 
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <h3>Order Summary</h3>
+    <div class="main-part">
 
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/layout.css" />
-  <link rel="stylesheet" href="/styles/menu.css" />
-  <link rel="stylesheet" href="/styles/header.css" />
-  <link rel="stylesheet" href="/styles/footer.css" />
+      <section id="main-order-container" class="left-part">
+      </section>
+  <div class="right-part">
+    <div class="total-div">
 
-  <script src="/vendor/jquery-3.0.0.js"></script>
-  <script src="scripts/order_summary.js"></script>
-  <script defer src=""></script>
-</head>
-
-<body>
-  <header>
-  </header>
-  <main>
-    <div>
-      <div class="method"></div>
-      <div class="pick-up"></div>
-      <div class="payment-contact"></div>
-      <div class="summary"></div>
     </div>
-    <div>
-      <div class="tax-subtotal"></div>
-      <div class="total"></div>
-      <div class=""></div>
+    <div class="subtotal-div">
+      <span>Subtotal:</span>
+      <span>CA$<output name="subtotal" class="subtotal"></output></span>
     </div>
-    <form action="/api/orders" method="post">
-      <!-- <input type="number" name="order_time" id="order-time"> -->
-      <button type="submit">SEND SMS</button>
+    <div class="tax-div">
+      <span>Estimated Tax:</span>
+      <span>CA$<output name="estimated-tax" class="estimated-tax"></output></span>
+    </div>
+    <div class="calculated-total-div">
+      <span>Total:</span>
+      <span>CA$<output name="calculated-total" class="calculated-total"></output></span>
+    </div>
+    <div class="part">
+
+    <form id="checkout-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="phone" id="phone" name="phone" required><br><br>
+
+    <input class="place-order" type="submit" value="Place Order">
     </form>
-  </main>
+    </div>
+  </div>
+</div>
 
-</body>
-
+  </body>
 </html>

@@ -1,44 +1,48 @@
--- DROP TABLE customers;
--- DROP TABLE foods;
--- DROP TABLE orders;
--- DROP TABLE ordered_foods;
--- DROP TABLE reviews;
+DROP TABLE ordered_foods;
+DROP TABLE reviews;
+DROP TABLE orders;
+DROP TABLE foods;
+DROP TABLE customers;
 
 CREATE TABLE customers (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE foods (
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL,
-  category VARCHAR(255) NOT NULL,
+  name VARCHAR (255) NOT NULL,
+  category VARCHAR (255) NOT NULL,
   price SMALLINT NOT NULL,
-  food_url VARCHAR(255) NOT NULL,
-  description TEXT NOT NULL
+  description TEXT NOT NULL,
+  food_url TEXT NOT NULL
 );
+
 
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY NOT NULL,
-  customer_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
-  order_date DATE NOT NULL,
+  customer_email VARCHAR(255) NOT NULL,
+  order_date DATE NOT NULL DEFAULT now(),
+  orderId VARCHAR(255) NOT NULL,
   order_completed BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE ordered_foods (
   id SERIAL PRIMARY KEY NOT NULL,
-  customer_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
-  order_id INTEGER REFERENCES orders(id) ON DELETE CASCADE,
+  customer_email VARCHAR(255) NOT NULL,
   food_id INTEGER REFERENCES foods(id) ON DELETE CASCADE,
-  food_count INTEGER NOT NULL
+  food_count INTEGER NOT NULL,
+  orderId VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE reviews (
+/* CREATE TABLE reviews (
   id SERIAL PRIMARY KEY NOT NULL,
   customer_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
   order_id INTEGER REFERENCES orders(id) ON DELETE CASCADE,
   review_date TIMESTAMP NOT NULL DEFAULT now(),
   rating INTEGER NOT NULL,
-  comment TEXT NOT NULL
+  comment VARCHAR (225) NOT NULL
 );
+ */
