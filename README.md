@@ -6,7 +6,7 @@
 
 ## Final Product
 
-![LightEat-Demo](https://github.com/zhuicode99/LightEat/blob/master/gif/Screen-Recording-2023-03-24-at-3.21.18-PM%20(1).gif?raw=true)
+![LightEat-Demo](https://github.com/zhuicode99/LightEat/blob/master/gif/Screen-Recording-2023-03-24-at-3.21.18-PM%20(1).gif)
 
 
 ## Getting Started
