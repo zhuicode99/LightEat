@@ -10,7 +10,12 @@ const cookieSession = require("cookie-session");
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+
+
+const ejs = require("ejs");
+app.engine("ejs", ejs.renderFile);
 app.set("view engine", "ejs");
+
 
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
@@ -41,13 +46,14 @@ app.use(express.static("public"));
 const foodsRoutes = require("./routes/foods"); //require from route folder
 const foodsApiRoutes = require('./routes/foods_api');
 const checkoutRoutes = require("./routes/checkout");
-
-
+const statusRoutes = require("./routes/status");
+const twilioRoutes = require("./routes/twilio");
 
 app.use("/foods", foodsRoutes); //this foods is the url
 app.use('/api/foods', foodsApiRoutes);
 app.use("/checkout", checkoutRoutes);
-
+app.use("/status", statusRoutes);
+app.use("/twilio", twilioRoutes);
 
 
 

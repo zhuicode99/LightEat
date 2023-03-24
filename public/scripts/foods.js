@@ -155,5 +155,14 @@ $(document).ready(function () {
   $(".estimated-tax").val(getTotals().tax);
   $(".subtotal").val(getTotals().subTotal);
   $(".calculated-total").val(getTotals().total);
+
+
+  $(".place-order").on("submit", localStorage.clear())
+
+
+
+//clear storage when order placed
+
+
 });
 //END OF DOCUMENT READY

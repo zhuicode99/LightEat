@@ -31,14 +31,14 @@
     </div>
     <div class="part">
 
-    <form id="checkout-form">
+    <form id="checkout-form" method="post" action="/status">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br><br>
 
     <label for="phone">Phone:</label>
     <input type="phone" id="phone" name="phone" required><br><br>
 
-    <input class="place-order" type="submit" value="Place Order">
+    <button class="place-order" type="submit" >Place Order</button>
     </form>
     </div>
   </div>

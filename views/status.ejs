@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Light Eats</title>
+
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
+  <link rel="stylesheet" href="/styles/status.css" />
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script defer src="/scripts/timer.js"></script>
+  <script defer src="/scripts/click.js"></script>
+  <script defer src="/scripts/foods.js"></script>
+</head>
+
+<body>
+  <h2>Order Placed!</h2>
+  <h1 style="font-size: larger; color: black">We Are Preparing Your Order, <%= client %> </h1>
+  <a href="/foods">Order More?</a>
+
+    <br>
+  <div>
+    <button class="check-status" onclick="myFunction()">check order status</button>
+  </div>
+      <br>
+  <main class="container">
+    <div style="display:none" id="myDIV">Estimate Wait Time is: <span id="timer"></span></div>
+  </main>
+
+</body>
+
+</html>
