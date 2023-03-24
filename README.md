@@ -6,7 +6,6 @@
 
 ## Final Product
 
-_"LightEat" Project Demo_
 ![LightEat-Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjcyMmJjZDAyNzFkNmNmNzM2ZWUzOWE0NDQ0ZTkxZWJiMGFmMTYyZiZjdD1n/81gJyhOT9fm5xtqj2E/giphy.gif)
 
 ## Getting Started
